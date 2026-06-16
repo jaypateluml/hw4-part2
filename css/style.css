@@ -1,0 +1,155 @@
+/* Jay Patel */
+/* COMP 4610 GUI I - HW4 Part 2 */
+
+/* page background */
+body {
+    background-color: #f7f0e0;
+    padding-bottom: 40px;
+}
+
+/* title */
+#pageTitle {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-weight: normal;
+    color: #222222;
+    padding: 25px 10px;
+    margin: 0 0 25px 0;
+    border-bottom: 4px solid #c0392b;
+    background-color: white;
+}
+
+/* form and preview side by side */
+#topRow {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#previewBox {
+    flex: 1;
+    min-width: 300px;
+}
+
+.previewTitle {
+    margin-top: 0;
+}
+
+/* form box */
+#formBox {
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    padding: 15px 20px;
+    background-color: white;
+    max-width: 500px;
+}
+
+#formBox legend {
+    width: auto;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #21395c;
+    padding: 0 8px;
+    margin-bottom: 5px;
+}
+
+/* slider under each box */
+.slider {
+    margin: 12px 4px 8px 4px;
+}
+
+/* validaton error text */
+label.error {
+    display: block;
+    color: #a94442;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* red border on error */
+input.error {
+    border: 1px solid #a94442;
+}
+
+/* headings */
+.previewTitle,
+.tablesTitle {
+    color: #21395c;
+}
+
+.hint {
+    color: #777777;
+    font-style: italic;
+}
+
+/* close x on tabs */
+.closeTab {
+    margin-left: 8px;
+    color: #c0392b;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* scroll box */
+.tableArea {
+    max-height: 500px;
+    max-width: 100%;
+    overflow: auto;
+    border: 1px solid #cccccc;
+    margin-top: 10px;
+}
+
+#preview {
+    margin-top: 10px;
+}
+
+/* table */
+table {
+    border-collapse: collapse;
+    background-color: white;
+}
+
+td, th {
+    border: 1px solid #b3c0d1;
+    padding: 8px 14px;
+    text-align: center;
+}
+
+/* number cells */
+td {
+    background-color: white;
+    color: #222222;
+}
+
+/* alternating rows */
+tbody tr:nth-child(even) td {
+    background-color: #d6e0ea;
+}
+
+/* top rows */
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #21395c;
+    color: white;
+    z-index: 1;
+}
+
+/* first colmun */
+tbody th {
+    position: sticky;
+    left: 0;
+    background-color: #21395c;
+    color: white;
+    z-index: 1;
+}
+
+/* top left corner cell*/
+thead th:first-child {
+    left: 0;
+    z-index: 2;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Jay Patel -->
+<!-- COMP 4610 GUI I - HW4 Part 2 -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dynamic Multiplication Table</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <!-- jquery ui css -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- title -->
+    <h1 id="pageTitle">Dynamic Multiplication Table</h1>
+
+    <div class="container">
+
+        <!-- form left, preview right -->
+        <div id="topRow">
+
+        <!-- form box, always shows -->
+        <fieldset id="formBox">
+            <legend>Please enter the table ranges</legend>
+
+            <!-- each box has a slider under it -->
+            <form id="tableForm" role="form">
+                <div class="form-group">
+                    <label for="minCol">Minimum Column Value (between -50 and 50):</label>
+                    <input type="text" class="form-control" id="minCol" name="minCol" placeholder="for example 1">
+                    <div class="slider" id="sliderMinCol"></div>
+                </div>
+                <div class="form-group">
+                    <label for="maxCol">Maximum Column Value (between -50 and 50):</label>
+                    <input type="text" class="form-control" id="maxCol" name="maxCol" placeholder="for example 10">
+                    <div class="slider" id="sliderMaxCol"></div>
+                </div>
+                <div class="form-group">
+                    <label for="minRow">Minimum Row Value (between -50 and 50):</label>
+                    <input type="text" class="form-control" id="minRow" name="minRow" placeholder="for example 1">
+                    <div class="slider" id="sliderMinRow"></div>
+                </div>
+                <div class="form-group">
+                    <label for="maxRow">Maximum Row Value (between -50 and 50):</label>
+                    <input type="text" class="form-control" id="maxRow" name="maxRow" placeholder="for example 10">
+                    <div class="slider" id="sliderMaxRow"></div>
+                </div>
+                <button type="submit" class="btn btn-primary">Generate Table</button>
+                <button type="button" id="deleteAll" class="btn btn-danger">Delete All Tables</button>
+            </form>
+        </fieldset>
+
+        <!-- live preview -->
+        <div id="previewBox">
+            <h3 class="previewTitle">Live Preview</h3>
+            <div id="preview"></div>
+        </div>
+
+        </div><!-- end top row -->
+
+        <!-- generated tables show as tabs -->
+        <h3 class="tablesTitle">Generated Tables</h3>
+        <div id="tabs">
+            <ul></ul>
+        </div>
+
+    </div>
+
+    <!-- javascript -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="js/table.js"></script>
+</body>
+</html>
